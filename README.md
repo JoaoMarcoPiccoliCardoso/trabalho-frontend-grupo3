@@ -2,9 +2,9 @@
 
 # Trabalho de FrontEnd Essencial Grupo 3 - 
 
-## Luan D'Almeida Cailleaux
-## Gabriel Santiago Neves
-## Roberta Medeiros Stumpf
-## Matheus Machado de Souza Borges
-## Jullian Carlo Pereira Cardoso 
-## João Marco Piccoli Cardoso
+<a href = "https://github.com/LuanCailleaux" target="_blank"> Luan D'Almeida Cailleaux </a>
+<a href = "https://github.com/S4nt1ag" target="_blank"> Gabriel Santiago Neves </a>
+<a href = "https://github.com/roberta2105" target="_blank"> Roberta Medeiros Stumpf </a>
+<a href = "https://github.com/matheusborgesm" target="_blank"> Matheus Machado de Souza Borges </a>
+<a href = "https://github.com/JullianCarlo" target="_blank"> Jullian Carlo Pereira Cardoso </a>
+<a href = "https://github.com/JoaoMarcoPiccoliCardoso" target="_blank"> João Marco Piccoli Cardoso </a>
