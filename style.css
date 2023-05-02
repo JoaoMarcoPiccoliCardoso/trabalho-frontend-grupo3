@@ -32,12 +32,15 @@ header {
 }
 .logo {
     position: relative;
-    top: -140px;
+    top: -160px;
 }
 
 .logo img {
-    width: 330px;
+    width: 380px;
+    top: -140px;
 }
+
+
 
 .menu{
     margin-top: 15px;
@@ -62,7 +65,6 @@ header {
 }
 
 .title h2{
-
     color:black;
     font-size: 40px;
     letter-spacing: 1.5px;
@@ -74,3 +76,8 @@ header {
     text-decoration: overline;
     text-decoration: black;
 }
+.productName {
+    font-size: 20px;
+    font-weight: bold;
+}
+
