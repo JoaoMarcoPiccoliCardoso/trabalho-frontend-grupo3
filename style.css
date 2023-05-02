@@ -37,7 +37,10 @@ header {
 
 .logo img {
     width: 380px;
+    top: -140px;
 }
+
+
 
 .menu{
     margin-top: 15px;
@@ -73,8 +76,8 @@ header {
     text-decoration: overline;
     text-decoration: black;
 }
-
 .productName {
     font-size: 20px;
     font-weight: bold;
 }
+
