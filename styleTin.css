@@ -15,7 +15,7 @@ section.main {
 
     width: 100%;
     min-height: 100%;
-    background-image: url('./img/20200616060919.jpg');
+    background-image: url('./img/tin.jpg');
     background-position: center;
     background-size: cover;
 }
@@ -59,7 +59,6 @@ header {
     transition: 0.3;
     padding: 3px 5px;
 }
-
 .menu a:hover {
     border-radius: 10px;
     background-color: rgba(200, 200, 200, 0.4);
