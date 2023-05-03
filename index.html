@@ -1,41 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RoboMarket</title>
-    <link rel="icon" href="./img/favicon.png" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <section class="main">
-      <div class="center">
-        <header>
-          <div class="logo">
-            <a href="./index.html">
-              <img src="./img/logo.png" alt="Logo" />
-            </a>
-          </div>
 
-          <div class="menu">
-            <a href="./spot2v.html" class="productName">Spot 2V</a>
-            <a href="./stretch.html" class="productName">Stretch</a>
-            <a href="./tin.html" class="productName">Tin</a>
-            <a href="./promobot.html" class="productName">Promobot</a>
-            <a href="#" class="productName">Luan</a>
-            <a href="#" class="productName">Jullian</a>
-          </div>
-          <div class="menu">
-            <a href="#" class="">Carrinho</a>
-            <a href="#" class="">Menu</a>
-          </div>
-        </header>
-        <div class="title">
-          <h2>Spot 2V</h2>
-          <p>Compre <a href="">agora</a></p>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RoboMarket</title>
+  <link rel="icon" href="./img/favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="container">
+
+    <header>
+        <a class="logo" href="./index.html">
+          <img src="./img/logo.png" alt="Logo" />
+        </a>
+      <nav class="center desktop">
+        <div id="products">
+          <a href="./spot2v.html" class = "product">Spot 2V</a>
+          <a href="./stretch.html" class = "product">Stretch</a>
+          <a href="./tin.html" class = "product">Tin</a>
+          <a href="./promobot.html" class = "product">Promobot</a>
+          <a href="./medic.html" class = "product">Medic</a>
+          <a href="./ameca.html" class = "product">Ameca</a>
         </div>
+      </nav>
+      <nav class="right">
+        <div id="menuCart">
+          <a href="#" id="cartBtn">Carrinho</a>
+          <a href="#" id="menuBtn">Menu</a>
+        </div>
+      </nav>
+    </header>
+    <div class="backdrop"></div>
+    <aside>
+      <button class="close">&times;</button>
+      <a href="./spot2v.html" class="produtosMenu">Spot 2V</a>
+      <a href="./stretch.html" class="produtosMenu">Stretch</a>
+      <a href="./tin.html" class="produtosMenu">Tin</a>
+      <a href="./promobot.html" class="produtosMenu">Promobot</a>
+      <a href="./medic.html" class="produtosMenu">Medic</a>
+      <a href="./ameca.html" class="produtosMenu">Ameca</a>
+      <a href="" class="produtosMenu">Sobre nós</a>
+    </aside>
+    <aside id="asideCart">
+      <button class="closeCart">&times;</button>
+      <!-- <div class="cartProd">
+        <img src="./img/ameca.jpg" alt="ameca" class="cartProdImg">
+        <div>
+          <p>Nome do produto</p>
+          <p>Preço total</p>
+          <input type="number">
+        </div>
+      </div> -->
+
+
+    </aside>
+    </div>
+
+    <section style="background-image: url('img/20200616060919.jpg')">
+      <div class="content">
+        <h1>Spot 2V</h1>
+        <p>Compre agora</p>
       </div>
     </section>
-  </body>
+    <section style="background-image: url('img/stretch.jpg')">
+      <div class="content">
+        <h1>Stretch</h1>
+        <p>Compre agora</p>
+      </div>
+    </section>
+    <section style="background-image: url('img/tin.jpg')">
+      <div class="content">
+        <h1>Tin</h1>
+        <p>Compre agora</p>
+      </div>
+    </section>
+    <section style="background-image: url('img/promobot.jpg')">
+      <div class="content">
+        <h1>Promobot</h1>
+        <p>Compre agora</p>
+      </div>
+    </section>
+    <section style="background-image: url('img/medic.jpg')">
+      <div class="content">
+        <h1>Medic</h1>
+        <p>Compre agora</p>
+      </div>
+    </section>
+    <section style="background-image: url('img/ameca.jpg')">
+      <div class="content">
+        <h1>Ameca</h1>
+        <p>Compre agora</p>
+      </div>
+    </section>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+
 </html>
