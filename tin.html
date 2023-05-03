@@ -1,41 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RoboMarket</title>
-    <link rel="icon" href="./img/favicon.png" />
-    <link rel="stylesheet" href="styleTin.css" />
-  </head>
-  <body>
-    <section class="main">
-      <div class="center">
-        <header>
-          <div class="logo">
-            <a href="./index.html">
-              <img src="./img/logo.png" alt="Logo" />
-            </a>
-          </div>
 
-          <div class="menu">
-            <a href="./spot2v.html" class="productName">Spot 2V</a>
-            <a href="./stretch.html" class="productName">Stretch</a>
-            <span class="productName" id="selected">Tin</span>
-            <a href="./promobot.html" class="productName">Promobot</a>
-            <a href="./medic.html" class="productName">Medic</a>
-            <a href="./ameca.html" class="productName">Ameca</a>
-          </div>
-          <div class="menu">
-            <a href="#" class="">Carrinho</a>
-            <a href="#" class="">Menu</a>
-          </div>
-        </header>
-        <div class="title">
-          <h2>Tin</h2>
-          <p>Compre <a href="">agora</a></p>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RoboMarket</title>
+  <link rel="icon" href="./img/favicon.png" />
+  <link rel="stylesheet" href="styleTin.css" />
+</head>
+
+<body>
+  <div id="container">
+
+    <header>
+        <a class="logo" href="./index.html">
+          <img src="./img/logo.png" alt="Logo" />
+        </a>
+      <nav class="center desktop">
+        <div id="products">
+          <a href="./spot2v.html" class = "product">Spot 2V</a>
+          <a href="./stretch.html" class = "product">Stretch</a>
+          <a href="./tin.html" class = "product">Tin</a>
+          <a href="./promobot.html" class = "product">Promobot</a>
+          <a href="./medic.html" class = "product">Medic</a>
+          <a href="./ameca.html" class = "product">Ameca</a>
         </div>
-      </div>
-    </section>
-  </body>
+      </nav>
+      <nav class="right">
+        <div id="menuCart">
+          <a href="#" id="cartBtn">Carrinho</a>
+          <a href="#" id="menuBtn">Menu</a>
+        </div>
+      </nav>
+    </header>
+    <div class="backdrop"></div>
+    <aside>
+      <button class="close">&times;</button>
+      <a href="./spot2v.html" class="produtosMenu">Spot 2V</a>
+      <a href="./stretch.html" class="produtosMenu">Stretch</a>
+      <a href="./tin.html" class="produtosMenu">Tin</a>
+      <a href="./promobot.html" class="produtosMenu">Promobot</a>
+      <a href="./medic.html" class="produtosMenu">Medic</a>
+      <a href="./ameca.html" class="produtosMenu">Ameca</a>
+      <a href="" class="produtosMenu">Sobre nós</a>
+    </aside>
+    <aside id="asideCart">
+      <button class="closeCart">&times;</button>
+      <!-- <div class="cartProd">
+        <img src="./img/ameca.jpg" alt="ameca" class="cartProdImg">
+        <div>
+          <p>Nome do produto</p>
+          <p>Preço total</p>
+          <input type="number">
+        </div>
+      </div> -->
+    </aside>
+    </div>
+  </div>
+  <br>
+  <div id="NomeRobo">
+    <h1>Modelo Tinbot</h1>
+  </div>
+    <table>
+    <tr>
+    <div class="img-container" >
+    <td><img src="img/tinbot-v2-imagem.webp" alt="Tinbot Imagem" width="900px">
+    </td>
+    </div>
+
+  <td><pre id="SobreTin">
+
+    SOBRE O TINBOT
+
+      O robô Tinbot possui uma voz masculina,
+    se expressa através da fala, com várias 
+    expressões facias e também é capaz de 
+    movimentar os braços, cabeça e torso.
+      Ele também possui a habilidade de seguir
+    as pessoas com o seu olhar.
+
+  </td></pre>
+  </tr>
+  </table>
+  <table>
+    <tr>
+  <td><pre id="habilidades">
+   
+    FICHA TÉCNICA
+
+    - Comandos de voz.          
+    - Síntese de voz.           
+    - Reconhecimento facial.    
+    - Configuração por voz.        
+    - Programação avançada com JavaScript.                  
+    - Controle de LEDs coloridos.  
+    - Programação simplificada com linguagem própria.                  
+    - Controle de movimentos de braços, cabeça e torso.
+    - Bateria com autonomia de 2h.
+    - Integração aberta através de APIs.
+    - Reprodução de efeitos sonoros.
+    - Painel de Controle Remoto.
+
+  </pre></td>
+  <td><div class="img-Tinbravo" >
+     <img src="img/tinbot3.png" alt="Tinbot bravo" width="900px">
+    </div></td>
+  </tr></table>
+    <script src="script.js"></script>
+</body>
 </html>
