@@ -283,7 +283,10 @@ aside button.closeCart {
     width: 100%;
     margin: 75px;
 }
-
+.imagem{
+    max-width: 100%;
+    max-height: 100%;
+}
 /* ---------------------------------------- */
 
 /* Footer */
