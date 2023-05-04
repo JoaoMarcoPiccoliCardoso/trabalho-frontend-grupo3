@@ -83,4 +83,3 @@ var productCart = [
        imgURL: "./img/ameca.jpg"
     }
 ]
-
