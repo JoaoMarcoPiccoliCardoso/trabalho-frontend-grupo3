@@ -1,41 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RoboMarket</title>
-    <link rel="icon" href="./img/favicon.png" />
-    <link rel="stylesheet" href="style2v.css" />
-  </head>
-  <body>
-    <section class="main">
-      <div class="center">
-        <header>
-          <div class="logo">
-            <a href="./index.html">
-              <img src="./img/logo.png" alt="Logo" />
-            </a>
-          </div>
 
-          <div class="menu">
-            <span class="productName" id = "selected">Spot 2V</span>
-            <a href="./stretch.html" class="productName">Stretch</a>
-            <a href="./tin.html" class="productName">Tin</a>
-            <a href="./promobot.html" class="productName">Promobot</a>
-            <a href="./medic.html" class="productName">Medic</a>
-            <a href="./ameca.html" class="productName">Ameca</a>
-          </div>
-          <div class="menu">
-            <a href="#" class="">Carrinho</a>
-            <a href="#" class="">Menu</a>
-          </div>
-        </header>
-        <div class="title">
-          <h2>Spot 2V</h2>
-          <p>Compre <a href="">agora</a></p>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RoboMarket</title>
+  <link rel="icon" href="./img/favicon.png" />
+  <link rel="stylesheet" href="style2v.css" />
+</head>
+
+<body>
+  <div id="container">
+
+    <header>
+        <a class="logo" href="./index.html">
+          <img src="./img/logo.png" alt="Logo" />
+        </a>
+      <nav class="center desktop">
+        <div id="products">
+          <a href="./spot2v.html" class = "product">Spot 2V</a>
+          <a href="./stretch.html" class = "product">Stretch</a>
+          <a href="./tin.html" class = "product">Tin</a>
+          <a href="./promobot.html" class = "product">Promobot</a>
+          <a href="./medic.html" class = "product">Medic</a>
+          <a href="./ameca.html" class = "product">Ameca</a>
         </div>
+      </nav>
+      <nav class="right">
+        <div id="menuCart">
+          <a href="#" id="cartBtn">Carrinho</a>
+          <a href="#" id="menuBtn">Menu</a>
+        </div>
+      </nav>
+    </header>
+    <div class="backdrop"></div>
+    <aside>
+      <button class="close">&times;</button>
+      <a href="./spot2v.html" class="produtosMenu">Spot 2V</a>
+      <a href="./stretch.html" class="produtosMenu">Stretch</a>
+      <a href="./tin.html" class="produtosMenu">Tin</a>
+      <a href="./promobot.html" class="produtosMenu">Promobot</a>
+      <a href="./medic.html" class="produtosMenu">Medic</a>
+      <a href="./ameca.html" class="produtosMenu">Ameca</a>
+      <a href="" class="produtosMenu">Sobre nós</a>
+    </aside>
+    <aside id="asideCart">
+      <button class="closeCart">&times;</button>
+      <!-- <div class="cartProd">
+        <img src="./img/ameca.jpg" alt="ameca" class="cartProdImg">
+        <div>
+          <p>Nome do produto</p>
+          <p>Preço total</p>
+          <input type="number">
+        </div>
+      </div> -->
+    </aside>
+    </div>
+  </div>
+
+  <div id="second">
+
+    <br>
+    <div id="NomeRobo">
+      <h1>Modelo Spot 2V</h1>
+    </div>
+      <table>
+      <tr>
+      <div class="img-container" >
+      <td><img src="./img/spot-1-1592324743.jpg" alt="Spot 2V" width="800px">
+      </td>
       </div>
-    </section>
-  </body>
+  
+    <td><pre id="SobreSpot">
+  
+      Sobre Spot 2V
+  
+      Spot é um robô quadrúpede desenvolvido pela 
+      Boston Dynamics para diversas aplicações, 
+      com câmeras e sensores, movimentos ágeis e 
+      capacidade de escalada. É utilizado em 
+      inspeções industriais, missões de 
+      resgate e até mesmo como "cão robô".
+  
+    </td></pre>
+    </tr>
+    </table>
+    <table>
+      <tr>
+    <td><pre id="habilidades">
+     
+      FICHA TÉCNICA
+  
+      - Tipo de robô: quadrúpede          
+      - Peso: 25 kg (55 lbs)           
+      - Altura: 84 cm (33 in)   
+      - Câmeras: 360 graus, HD, com estabilização de imagem        
+      - Sensores: IMU, lidar, posição e força dos atuadores                 
+      - Velocidade máxima: 1,6 m/s (5,6 km/h)  
+      - Autonomia de bateria: 90 minutos                  
+      - Capacidade de carga: 14 kg (30 lbs)
+      - Comunicação: Wi-Fi, Ethernet e 4G/LTE (opcional)
+      - Software de controle: Boston Dynamics' Spot SDK
+
+  
+    </pre></td>
+    <td><div class="img-Tinbravo" >
+       <img src="img/spot2.jpg" alt="Tinbot bravo" width="800px">
+      </div></td>
+    </tr></table>
+  </div>
+    <script src="script.js"></script>
+</body>
 </html>
