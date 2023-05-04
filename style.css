@@ -22,18 +22,19 @@ a {
 
 button {
     width: 20%;
-    height: 70px;
+    height: 50px;
     cursor: pointer;
     border-radius: 10px;
-    background-color: #00BF63;
+    background-color: rgb(0, 255, 0);
     font-size: 20px;
     font-weight: bold;
     font-family: var(--bs-body-font-family);
 }
 
 button:hover {
-    background-color: #02ff85;
+    background-color: rgb(0, 145, 0);
 }
+
 
 /* Header: */
 
@@ -104,15 +105,14 @@ header {
 
 /* Main: */
 
-    main {
-        background-image: url(https://wallpaperaccess.com/full/260177.jpg);
-        min-height: 100%;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-        background-size: cover;
-    }
-
+main {
+    background-image: url(https://wallpaperaccess.com/full/260177.jpg);
+    min-height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
 aside {
     position: fixed;
     transition: right .4s ease;
@@ -159,6 +159,19 @@ aside button.close{
 }
 
 .backdrop.active{
+    display: block;
+}
+
+.backdrop2 {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0,0.35);
+    transition: right .4s ease;
+    backdrop-filter: blur(5px);
+}
+
+.backdrop2.active{
     display: block;
 }
 

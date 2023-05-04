@@ -1,11 +1,11 @@
 //    BOTÃO MENU COM SUAS FUNÇÕES
 const openMenu = () => {
     document.querySelector('.backdrop').className = 'backdrop active';
-    document.querySelector('aside').className = 'active';
+    document.getElementById('asideMenu').className = 'active';
 }
 const closeMenu = () => {
     document.querySelector('.backdrop').className = 'backdrop';
-    document.querySelector('aside').className = '';
+    document.getElementById('asideMenu').className = '';
 }
 document.getElementById('menuBtn').onclick = e => {
     e.preventDefault();
@@ -21,11 +21,11 @@ document.querySelector('.backdrop').onclick = e => {
 //  BOTÃO CARRINHO COM SUAS FUNÇÕES
 
 const openCart = () => {
-    document.querySelector('.backdrop').className = 'backdrop active';
+    document.querySelector('.backdrop2').className = 'backdrop2 active';
     document.getElementById('asideCart').className = 'active';
 }
 const closeCart = () => {
-    document.querySelector('.backdrop').className = 'backdrop';
+    document.querySelector('.backdrop2').className = 'backdrop2';
     document.getElementById('asideCart').className = '';
 }
 document.getElementById('cartBtn').onclick = e => {
@@ -35,7 +35,7 @@ document.getElementById('cartBtn').onclick = e => {
 document.querySelector('aside button.closeCart').onclick = e => {
     closeCart();
 }
-document.querySelector('.backdrop').onclick = e => {
+document.querySelector('.backdrop2').onclick = e => {
     closeCart();
 }
 
