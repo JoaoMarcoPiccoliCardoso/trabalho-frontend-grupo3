@@ -39,37 +39,48 @@ document.querySelector('.backdrop').onclick = e => {
     closeCart();
 }
 
-// SCROLL TELA DE SLIDES
-
-document.lastScrollPosition = 0;
-document.lastCentered = 0;
-document.onWayTo = null;
-
-document.addEventListener('scroll', () => {
-    const direction = window.pageYOffset - document.lastScrollPosition > 0 ? 'down' : 'up';
-    const sections = [...document.querySelectorAll('section')];
-
-    if (document.onWayTo === null) {
-        const destIndex = direction === 'up' ? document.lastCentered - 1 : document.lastCentered + 1; 
-        if (destIndex >= 0 && destIndex < sections.length) {
-            console.log({ destIndex, direction });
-            document.onWayTo = destIndex;
-            window.scroll(0, sections[destIndex].offsetTop);
-        }
+var productCart = [
+    {   
+        id: 1,
+       nome: "Spot 2V",
+       qtd: 0,
+       precoUnit: 15000.00,
+       imgURL: "./img/20200616060919.jpg"
+    },
+    {   
+        id: 2,
+        nome: "Stretch",
+       qtd: 0,
+       precoUnit: 30000.00,
+       imgURL: "./img/stretch.jpg"
+    },
+    {
+        id:3,
+        nome: "Tin",
+       qtd: 0,
+       precoUnit: 7500.00,
+       imgURL: "./img/tin.jpg"
+    },
+    {
+        id: 4,
+        nome: "Promobot",
+       qtd: 0,
+       precoUnit: 20000.00,
+       imgURL: "./img/promobot.jpg"
+    },
+    {
+        id: 5,
+        nome: "Medic",
+       qtd: 0,
+       precoUnit: 25000.00,
+       imgURL: "./img/medic.jpg"
+    },
+    {
+        id: 6,
+        nome: "Ameca",
+       qtd: 0,
+       precoUnit: 50000.00,
+       imgURL: "./img/ameca.jpg"
     }
+]
 
-
-    sections.forEach((section, index) => {
-        if (window.pageYOffset === section.offsetTop) {
-            document.lastCentered = index;
-            section.className = 'active';
-            if (document.onWayTo === index) {
-                document.onWayTo = null;
-            }
-        } else {
-            section.className = '';
-        }
-    })
-
-    document.lastScrollPosition = window.pageYOffset;
-})
