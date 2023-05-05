@@ -1,0 +1,319 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #171a20;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.desktop {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: #171a20;
+}
+
+button {
+    width: 20%;
+    height: 70px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #00BF63;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: var(--bs-body-font-family);
+}
+
+button:hover {
+    background-color: #02ff85;
+}
+
+/* Header: */
+
+header {
+    background-color: white;
+    width: 100%;
+    position: fixed;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    top: 0;
+    z-index: 2;
+    padding: 5px 20px;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#produtos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#produtos a {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+#menu a {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+#produtos a:hover,
+span {
+    background-color: rgba(0, 0, 0, 0.26);
+    border-radius: 5px;
+}
+
+#menu a:hover,
+span {
+    background-color: rgba(0, 0, 0, 0.26);
+    border-radius: 5px;
+}
+
+@media (max-width: 1246px) {
+    #produtos {
+        width: 0px;
+    }
+
+    #produtos a,
+    span {
+        font-size: 0px;
+        color: transparent;
+        margin: 0px;
+    }
+}
+
+/* ---------------------------------------- */
+
+/* Main: */
+main {
+    background-image: url(https://wallpaperaccess.com/full/260177.jpg);
+    min-height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+aside {
+    position: fixed;
+    transition: right .4s ease;
+    right: -320px;
+    width: 320px;
+    background-color: #FFF;
+    padding: 80px 40px;
+    z-index: 4;
+    height: 100vh;
+    margin-top: -25px;
+}
+
+aside.active {
+    right: 0;
+}
+
+aside a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    padding: 12px 0;
+
+}
+
+aside button.close {
+    font-size: 24px;
+    border: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.35);
+    transition: right .4s ease;
+    backdrop-filter: blur(5px);
+}
+
+.backdrop.active {
+    display: block;
+}
+
+.backdrop2 {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.35);
+    transition: right .4s ease;
+    backdrop-filter: blur(5px);
+}
+
+.backdrop2.active {
+    display: block;
+}
+
+#menuCart {
+    height: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.produtosMenu {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px 0px 20px 0px;
+}
+
+.produtosMenu:hover {
+    text-decoration: underline;
+}
+
+aside button.closeCart {
+    font-size: 24px;
+    border: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+#asideCart {
+    padding: 60px 0px 0px 0px;
+}
+
+.cartProd {
+    width: 100%;
+    height: 146px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cartProdImg {
+    height: 50%;
+    margin: 10px;
+}
+
+.cartProd div p {
+    margin: 10px;
+}
+
+#fundo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#titulo {
+    width: 90%;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: #FFF;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.metade {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.foto {
+    width: 25%;
+    height: 250px;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+    background-color: rgba(201, 201, 201, 0.911);
+    border-radius: 50% 0% 0% 50%;
+    
+}
+
+.texto {
+    width: 50%;
+    height: 250px;
+    background-color: rgba(201, 201, 201, 0.911);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.preco {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.preco .texto {
+    width: 100%;
+    margin: 75px;
+}
+
+.imagem {
+    max-width: 125%;
+    max-height: 100%;
+    border-radius: 50%;
+}
+
+#nome {
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+/* ---------------------------------------- */
+
+/* Footer */
+
+/* ---------------------------------------- */
