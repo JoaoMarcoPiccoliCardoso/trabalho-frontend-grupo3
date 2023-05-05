@@ -56,6 +56,11 @@ header {
     justify-content: center;
 }
 
+#logotipo {
+    width: 200px;
+}
+
+
 #produtos {
     display: flex;
     align-items: center;
@@ -70,13 +75,13 @@ header {
 
 
 #produtos a {
-    font-size: 25px;
+    font-size: 16px;
     font-weight: bold;
     margin: 20px;
 }
 
 #menu a {
-    font-size: 25px;
+    font-size: 16px;
     font-weight: bold;
     margin: 20px;
 }
