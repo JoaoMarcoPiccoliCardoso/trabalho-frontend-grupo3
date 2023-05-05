@@ -50,7 +50,7 @@ var productCart = [
     {   
         id: 2,
         nome: "Stretch",
-       qtd: 0,
+       qtd: 2,
        precoUnit: 30000.00,
        imgURL: "./img/stretch.jpg"
     },
