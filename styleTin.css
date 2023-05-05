@@ -257,7 +257,6 @@ aside button.closeCart {
     background-color: black;
     color: #FFF;
     font-size: 20px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .metade {
@@ -283,9 +282,16 @@ aside button.closeCart {
     min-height: 200px;
     background-color: rgba(201, 201, 201, 0.911);
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    text-align: start;
     font-size: 20px;
+    padding: 20px;
+}
+
+.texto p:first-child {
+    font-weight: bold;
 }
 
 .preco {

@@ -25,7 +25,7 @@ button {
     height: 50px;
     cursor: pointer;
     border-radius: 10px;
-    background-color: rgb(0, 255, 0);
+    background-color: #00BF63;
     font-size: 20px;
     font-weight: bold;
     font-family: var(--bs-body-font-family);
@@ -125,11 +125,12 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 64px;
 }
 
 #upper{
     width: 100%;
-    height: 1000px;
+    min-height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -137,9 +138,8 @@ main {
 }
 
 #apresentacao {
-    background-color: rgb(0, 255, 0);
     width: 500px;
-    height: 20%;
+    height: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -147,36 +147,55 @@ main {
     text-align: center;
 }
 
-#apresentacao h3 {
-    margin: 20px;
-    font-weight: bold;
-}
-
 #apresentacao h4 {
-    margin: 20px;
+    margin: 5px;
+    padding: 5px;
+    background-color: #00BF63;
+    border-radius: 4px;
 }
 
 #lower {
     width: 100%;
-    height: 1000px;
+    min-height: 400px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    margin-bottom: 0;
 }
 
 #textoApresentacao {
-    width: 30%;
-    height: 500px;
-    background-color: red;
+    width: 600px;
+    height: 400px;
+    background-color: rgba(201, 201, 201, 0.911);
     margin: 40px;
+    margin-bottom: 30px;
+    box-shadow: 2px 2px 2px 2px #171a2088;
+}
+
+#textoApresentacao h2 {
+    font-weight: bold;
+    margin: 10px;
+}
+
+#textoApresentacao p {
+    font-size: 20px;
+    margin: 20px;
 }
 
 #images {
-    width: 30%;
-    height: 500px;
-    background-color: green;
+    width: 600px;
+    height: 400px;
+    background-size: cover;
     margin: 40px;
+    margin-bottom: 30px;
+    box-shadow: 2px 2px 2px 2px #171a2088;
+}
+
+@media (max-width: 1417px) {
+    #lower{
+        flex-direction: column;
+    }
 }
 
 aside {
