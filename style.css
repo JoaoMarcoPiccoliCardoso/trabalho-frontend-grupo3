@@ -311,6 +311,25 @@ aside button.closeCart{
     margin: 10px;
 }
 
+@media (max-width: 670px) {
+    main {
+        margin-left: 50%;
+    }
+    #lower {
+        flex-direction: column;
+    }
+
+    #textoApresentacao {
+        width: 200%;
+        height: auto;
+        background-color: rgba(201, 201, 201, 0.911);
+        margin: 40px;
+        margin-bottom: 30px;
+        box-shadow: 2px 2px 2px 2px #171a2088;
+        
+    }
+}
+
 /* ---------------------------------------- */
 
 /* Footer */
