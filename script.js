@@ -125,11 +125,13 @@ var price = 0;
 function montarCart() {
   var cartHTML = '';
   var price = 0;
+  var numero = 0;
   for (let j=0; j <6; j++) {
     if (localStorage.getItem(j+1) != null) {
       let objeto = JSON.parse(localStorage.getItem(j+1));
       cartHTML += '<div class="produtoCarrinho"><div class="fotoCarrinho"><img src="'+objeto.url+'" alt="indisponível" /></div><div class="txtCarrinho"><p>Nome:'+objeto.nome+'</p><p>Preço: R$'+objeto.preco+',00</p><div class="botoes"><button class="botaoMais" onclick="adicionar('+objeto.id+')">+</button><div class="qtd"><p>'+objeto.qtd+'</p></div><button id="botaoMenos" onclick="reduzir('+objeto.id+')">-</button></div></div></div>';
       price += parseInt(objeto.qtd) * parseInt(objeto.preco) 
+      numero += objeto.qtd;
     }
   }
   if (cartHTML !== ''){
@@ -137,10 +139,12 @@ function montarCart() {
     document.getElementById('finLim').hidden = false;
     document.getElementById('total').innerText = "Total: R$"+price+",00";
     document.getElementById('total').hidden = false;
+    document.getElementById('cartBtn').innerText = "Carrinho (" + numero + ")";
   } else {
     document.getElementById('carrinho').innerHTML = '';
     document.getElementById('finLim').hidden = true;
     document.getElementById('total').hidden = true;
+    document.getElementById('cartBtn').innerText = "Carrinho"
 
   }
 }

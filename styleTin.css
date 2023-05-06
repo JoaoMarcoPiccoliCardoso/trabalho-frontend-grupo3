@@ -218,6 +218,7 @@ aside button.closeCart {
 
 #asideCart {
     padding: 60px 0px 0px 0px;
+    overflow-y: scroll;
 }
 
 .cartProd {
@@ -437,4 +438,9 @@ aside button.closeCart {
     justify-content: center;
     height: 5%;
     width: 100%;
+    margin-bottom: 25px;
+}
+
+#total {
+    margin-left: 10px;
 }
