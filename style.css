@@ -362,3 +362,70 @@ h4 {
 /* Footer */
 
 /* ---------------------------------------- */
+
+.produtoCarrinho {
+    margin: 3%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    width: 90%;
+    height: 15%;
+    border-bottom: 2px solid rgba(201, 201, 201, 0.911);
+}
+
+.fotoCarrinho {
+    width: 50%;
+    margin: 1%;
+    padding: 0;
+}
+
+.fotoCarrinho img{
+    width: 100%;
+}
+
+.txtCarrinho {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+}
+
+.txtCarrinho p{
+    font-size: 15px;
+    margin: 0;
+}
+
+.botoes{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.botoes button{
+    height: 50%;
+    width: 33.5%;
+    margin: 5%;
+}
+
+.qtd{
+    width: 33%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#finalizar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5%;
+    width: 80%;
+    margin:5%;
+    font-size: 80%;
+}

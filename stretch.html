@@ -38,7 +38,7 @@
           <a href="./ameca.html" class="product">Ameca</a>
         </div>
         <div id="menu">
-          <a href="#" id="cartBtn">Comprar</a>
+          <a href="#" id="cartBtn">Carrinho</a>
           <a href="#" id="menuBtn">Menu</a>
         </div>
       </header>
@@ -60,6 +60,11 @@
       <div>
         <aside id="asideCart">
           <button class="closeCart">&times;</button>
+          <div id="carrinho">
+            
+          </div>
+          <p id="total" hidden></p>
+          <button id="finalizar" hidden onclick="finish()">Finalizar</button>
         </aside>
       </div>
 
@@ -83,7 +88,7 @@
                   armazéns.
                 </p>
               </div>
-              <button>Comprar</button>
+              <button onclick="comprar(2)">Comprar</button>
             </div>
           </div>
           <div class="metade">

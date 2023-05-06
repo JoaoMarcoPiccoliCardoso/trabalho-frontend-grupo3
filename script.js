@@ -45,62 +45,165 @@ var productCart = [
     nome: "Spot 2V",
     qtd: 0,
     precoUnit: 15000.0,
-    imgURL: "./img/20200616060919.jpg",
+    imgURL: "./img/prod1.jpg"
   },
   {
     id: 2,
     nome: "Stretch",
     qtd: 2,
     precoUnit: 30000.0,
-    imgURL: "./img/stretch.jpg",
+    imgURL: "./img/prod2.jpg"
   },
   {
     id: 3,
     nome: "Tin",
     qtd: 0,
     precoUnit: 7500.0,
-    imgURL: "./img/tin.jpg",
+    imgURL: "./img/prod3.jpg"
   },
   {
     id: 4,
     nome: "Promobot",
     qtd: 0,
     precoUnit: 20000.0,
-    imgURL: "./img/promobot.jpg",
+    imgURL: "./img/prod4.jpg"
   },
   {
     id: 5,
     nome: "Medic",
     qtd: 0,
     precoUnit: 25000.0,
-    imgURL: "./img/medic.jpg",
+    imgURL: "./img/prod5.jpg"
   },
   {
     id: 6,
     nome: "Ameca",
     qtd: 0,
     precoUnit: 50000.0,
-    imgURL: "./img/ameca.jpg",
+    imgURL: "./img/prod6.jpg"
+  }
+];
+
+// var lista = [
+//   "./img/imagem_2023-05-05_191825645.png",
+//   "./img/imagem_2023-05-05_191745894.png",
+//   "./img/imagem_2023-05-05_192442555.png",
+//   "./img/imagem_2023-05-05_194744255.png",
+//   "./img/imagem_2023-05-05_194221086.png",
+//   "./img/imagem_2023-05-05_192800253.png",
+// ];
+
+// var i = 0;
+// function change() {
+//   document.getElementById("images").style.backgroundImage =
+//     "url(" + lista[i] + ")";
+//   i++;
+//   if (i == lista.length) {
+//     i = 0;
+//   }
+// }
+
+// setInterval(change, 3000);
+
+//Carrinho:
+
+var listaProd = [
+  {
+    id: 1,
+    nome: "Spot 2v",
+    preco: 150000,
+    url: "./img/prod1.pngg"
   },
-];
+  {
+    id: 2,
+    nome: "Stretch",
+    preco: 50000,
+    url: "./img/prod1.pngg"
+  },
+  {
+    id: 3,
+    nome: "Tinbot",
+    preco: 15000,
+    url: "./img/prod1.pngp"
+  },
+  {
+    id: 4,
+    nome: "Promobot",
+    preco: 124610,
+    url: "./img/prod1.pngg"
+  },
+  {
+    id: 5,
+    nome: "Medic",
+    preco: 250000,
+    url: "./img/prod1.pngg"
+  },
+  {
+    id: 6,
+    nome: "Ameca",
+    preco: 500000,
+    url: "./img/prod1.pngg"
+  }
+]
 
-var lista = [
-  "./img/imagem_2023-05-05_191825645.png",
-  "./img/imagem_2023-05-05_191745894.png",
-  "./img/imagem_2023-05-05_192442555.png",
-  "./img/imagem_2023-05-05_194744255.png",
-  "./img/imagem_2023-05-05_194221086.png",
-  "./img/imagem_2023-05-05_192800253.png",
-];
-
-var i = 0;
-function change() {
-  document.getElementById("images").style.backgroundImage =
-    "url(" + lista[i] + ")";
-  i++;
-  if (i == lista.length) {
-    i = 0;
+function comprar(i) {
+  if (localStorage.getItem(i) == null) {
+    var prod = JSON.stringify({
+      'id': listaProd[i-1].id,
+      'nome': listaProd[i-1].nome,
+     'preco': listaProd[i-1].preco,
+      'url': listaProd[i-1].url,
+      'qtd': 1
+    })
+    localStorage.setItem(i, prod) 
+  } else {
+    var prodJSON = JSON.parse(localStorage.getItem(i));
+    prodJSON.qtd += 1;
+    localStorage.setItem(i, JSON.stringify(prodJSON));
+    // location.reload();
   }
 }
 
-setInterval(change, 3000);
+function montarCart() {
+  var cartHTML = '';
+  var price = 0;
+  for (let j=0; j <6; j++) {
+    if (localStorage.getItem(j+1) != null) {
+      let objeto = JSON.parse(localStorage.getItem(j+1));
+      price += objeto.preco;
+      cartHTML += '<div class="produtoCarrinho"><div class="fotoCarrinho"><img src="'+objeto.url+'" alt="indisponível" /></div><div class="txtCarrinho"><p>Nome:'+objeto.nome+'</p><p>Preço: R$'+objeto.preco+',00</p><div class="botoes"><button class="botaoMais" onclick="adicionar('+objeto.id+')">+</button><div class="qtd"><p>'+objeto.qtd+'</p></div><button id="botaoMenos" onclick="reduzir('+objeto.id+')">-</button></div></div></div>';
+    }
+  }
+  if (cartHTML !== ''){
+    document.getElementById('carrinho').innerHTML = cartHTML;
+    document.getElementById('finalizar').hidden = false;
+    document.getElementById('total').innerText = "Total: R$"+price+",00";
+    document.getElementById('total').hidden = false;
+  }
+}
+
+const cartBtn = document.getElementById('cartBtn');
+
+cartBtn.addEventListener('click', montarCart());
+
+function adicionar(i) {
+  var prodJSON = JSON.parse(localStorage.getItem(i));
+  prodJSON.qtd += 1;
+  localStorage.setItem(i, JSON.stringify(prodJSON));
+}
+
+function reduzir(i) {
+  var prodJSON = JSON.parse(localStorage.getItem(i));
+  prodJSON.qtd -= 1;
+  if(parseInt(JSON.qtd) > 0) {
+    localStorage.setItem(i, JSON.stringify(prodJSON));
+  } else {
+    localStorage.removeItem(i)
+  }
+}
+
+
+function finish() {
+  localStorage.clear();
+  location.reload();
+}
