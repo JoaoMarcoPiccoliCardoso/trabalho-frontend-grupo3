@@ -290,7 +290,6 @@ aside button.closeCart {
     flex-direction: row;
     align-items: center;
     font-size: 20px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .preco {
@@ -315,7 +314,11 @@ aside button.closeCart {
 
 #nome {
     font-size: 30px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-right: 40px;
+}
+
+.texto p{
+    margin-right: 25px;
 }
 @media (max-width: 670px) {
     aside {
