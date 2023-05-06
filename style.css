@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -6,11 +6,13 @@
 
 body {
     color: #171a20;
+
 }
+
 html {
     scroll-behavior: smooth;
 }
-z
+
 .desktop {
     display: none;
 }
@@ -22,7 +24,7 @@ a {
 
 button {
     width: 20%;
-    height: 50px;
+    height: 70px;
     cursor: pointer;
     border-radius: 10px;
     background-color: #00BF63;
@@ -32,9 +34,8 @@ button {
 }
 
 button:hover {
-    background-color: rgb(0, 145, 0);
+    background-color: #02ff85;
 }
-
 
 /* Header: */
 
@@ -99,17 +100,20 @@ span {
 
 @media (max-width: 1246px) {
     #produtos {
-        display: none;
-    }#menu {
-        display: flex;
-        align-items: center;
-        justify-content: end;
+        width: 0px;
+    }
+
+    #produtos a,
+    span {
+        font-size: 0px;
+        color: transparent;
+        margin: 0px;
     }
 }
+
 /* ---------------------------------------- */
 
 /* Main: */
-
 main {
     background-image: url(https://wallpaperaccess.com/full/260177.jpg);
     min-height: 100%;
@@ -117,80 +121,6 @@ main {
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 64px;
-}
-
-#upper{
-    width: 100%;
-    min-height: 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-#apresentacao {
-    width: 500px;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-#apresentacao h4 {
-    margin: 5px;
-    padding: 5px;
-    background-color: #00BF63;
-    border-radius: 4px;
-}
-
-#lower {
-    width: 100%;
-    min-height: 400px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 0;
-}
-
-#textoApresentacao {
-    width: 600px;
-    height: 400px;
-    background-color: rgba(201, 201, 201, 0.911);
-    margin: 40px;
-    margin-bottom: 30px;
-}
-
-#textoApresentacao h2 {
-    font-weight: bold;
-    margin: 10px;
-}
-
-#textoApresentacao p {
-    font-size: 20px;
-    margin: 20px;
-}
-
-#images {
-    width: 600px;
-    height: 400px;
-    background-size: cover;
-    margin: 40px;
-    margin-bottom: 30px;
-    box-shadow: 2px 2px 2px 2px #171a2088;
-}
-
-@media (max-width: 1417px) {
-    #lower{
-        flex-direction: column;
-    }
 }
 
 aside {
@@ -202,7 +132,7 @@ aside {
     padding: 80px 40px;
     z-index: 4;
     height: 100vh;
-    margin-top: -40px;
+    margin-top: -25px;
 }
 
 aside.active {
@@ -307,18 +237,110 @@ aside button.closeCart {
     margin: 10px;
 }
 
-@media(max-width: 670px) {
-    #textoApresentacao{
-        width: 50%;
-        height: 100%;
-        background-color: rgba(201, 201, 201, 0.911);
-        font-size: 20px;
-        margin: 40px;
-    }
-    #images {
-        display: none;
-    }
+#fundo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
 
+#titulo {
+    width: 90%;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: #FFF;
+    font-size: 0px;
+    margin-bottom: 0px;
+}
+
+.metade {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px;
+    margin-bottom: 25px;
+}
+
+.foto {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto {
+    width: 50%;
+    min-height: 200px;
+    background-color: rgba(201, 201, 201, 0.911);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    text-align: start;
+    font-size: 20px;
+    padding: 20px;
+}
+
+
+.texto p:first-child {
+    font-weight: bold;
+}
+
+.preco {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.preco .texto {
+    width: 100%;
+    margin: 75px;
+}
+.imagem{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+h4 {
+    margin: 5px;
+    padding: 5px;
+    background-color: #00BF63;
+    border-radius: 4px;
+}
+
+@media (max-width: 670px) {
+    .metade {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+       
+    }
+    
+    button {
+        width: 100%;
+        height: 70px;
+        cursor: pointer;
+        border-radius: 10px;
+        background-color: #00BF63;
+        font-size: 13px;
+        font-weight: bold;
+        font-family: var(--bs-body-font-family);
+    }
     aside {
         width: 50%;
     
@@ -328,17 +350,13 @@ aside button.closeCart {
         font-weight: bold;
         margin: 20px 0px 20px 0px;
     }
-    #upper{
-        width: 100%;
-        min-height: 400px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    
+}
+@media (max-width: 410px) {
+    #logotipo {
+        width: 50%;
     }
 }
-
-
 /* ---------------------------------------- */
 
 /* Footer */
