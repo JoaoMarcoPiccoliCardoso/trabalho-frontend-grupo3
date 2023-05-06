@@ -99,14 +99,11 @@ span {
 
 @media (max-width: 1246px) {
     #produtos {
-        width: 0px;
-    }
-
-    #produtos a,
-    span {
-        font-size: 0px;
-        color: transparent;
-        margin: 0px;
+        display: none;
+    }#menu {
+        display: flex;
+        align-items: center;
+        justify-content: end;
     }
 }
 /* ---------------------------------------- */
@@ -330,6 +327,14 @@ aside button.closeCart {
         font-size: 13px;
         font-weight: bold;
         margin: 20px 0px 20px 0px;
+    }
+    #upper{
+        width: 100%;
+        min-height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }
 
