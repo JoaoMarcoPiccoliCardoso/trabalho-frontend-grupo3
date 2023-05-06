@@ -10,7 +10,7 @@ body {
 html {
     scroll-behavior: smooth;
 }
-
+z
 .desktop {
     display: none;
 }
@@ -59,6 +59,7 @@ header {
     width: 200px;
 }
 
+
 #produtos {
     display: flex;
     align-items: center;
@@ -75,7 +76,7 @@ header {
 #produtos a {
     font-size: 16px;
     font-weight: bold;
-    margin: 20px;    
+    margin: 20px;
 }
 
 #menu a {
@@ -84,30 +85,28 @@ header {
     margin: 20px;
 }
 
-#produtos a:hover,span {
-    background-color: rgba(0, 0, 0, 0.26); 
+#produtos a:hover,
+span {
+    background-color: rgba(0, 0, 0, 0.26);
     border-radius: 5px;
 }
 
-#menu a:hover,span{
-    background-color: rgba(0, 0, 0, 0.26); 
+#menu a:hover,
+span {
+    background-color: rgba(0, 0, 0, 0.26);
     border-radius: 5px;
 }
 
 @media (max-width: 1246px) {
-    #produtos{
+    #produtos {
         width: 0px;
     }
-    #produtos a,span{
+
+    #produtos a,
+    span {
         font-size: 0px;
         color: transparent;
-        margin: 0px; 
-    }
-}
-
-@media (max-width: 410px) {
-    #logotipo {
-        width: 50%;
+        margin: 0px;
     }
 }
 /* ---------------------------------------- */
@@ -207,6 +206,7 @@ aside {
     padding: 80px 40px;
     z-index: 4;
     height: 100vh;
+    margin-top: -50px;
 }
 
 aside.active {
@@ -311,24 +311,7 @@ aside button.closeCart{
     margin: 10px;
 }
 
-@media (max-width: 670px) {
-    main {
-        margin-left: 50%;
-    }
-    #lower {
-        flex-direction: column;
-    }
 
-    #textoApresentacao {
-        width: 200%;
-        height: auto;
-        background-color: rgba(201, 201, 201, 0.911);
-        margin: 40px;
-        margin-bottom: 30px;
-        box-shadow: 2px 2px 2px 2px #171a2088;
-        
-    }
-}
 
 /* ---------------------------------------- */
 
