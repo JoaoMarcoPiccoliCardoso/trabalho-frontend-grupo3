@@ -415,8 +415,26 @@ aside button.closeCart {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 5%;
+    height: 100%;
     width: 80%;
-    margin:5%;
     font-size: 80%;
+}
+#lixeira{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 20%;
+    background-color: red;
+    font-size: 80%;
+    font-weight: bold;
+}
+
+#finLim{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 5%;
+    width: 100%;
 }
