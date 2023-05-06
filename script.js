@@ -39,51 +39,6 @@ document.querySelector(".backdrop2").onclick = (e) => {
   closeCart();
 };
 
-var productCart = [
-  {
-    id: 1,
-    nome: "Spot 2V",
-    qtd: 0,
-    precoUnit: 15000.0,
-    imgURL: "./img/prod1.jpg"
-  },
-  {
-    id: 2,
-    nome: "Stretch",
-    qtd: 2,
-    precoUnit: 30000.0,
-    imgURL: "./img/prod2.jpg"
-  },
-  {
-    id: 3,
-    nome: "Tin",
-    qtd: 0,
-    precoUnit: 7500.0,
-    imgURL: "./img/prod3.jpg"
-  },
-  {
-    id: 4,
-    nome: "Promobot",
-    qtd: 0,
-    precoUnit: 20000.0,
-    imgURL: "./img/prod4.jpg"
-  },
-  {
-    id: 5,
-    nome: "Medic",
-    qtd: 0,
-    precoUnit: 25000.0,
-    imgURL: "./img/prod5.jpg"
-  },
-  {
-    id: 6,
-    nome: "Ameca",
-    qtd: 0,
-    precoUnit: 50000.0,
-    imgURL: "./img/prod6.jpg"
-  }
-];
-
 // var lista = [
 //   "./img/imagem_2023-05-05_191825645.png",
 //   "./img/imagem_2023-05-05_191745894.png",
@@ -112,37 +67,37 @@ var listaProd = [
     id: 1,
     nome: "Spot 2v",
     preco: 150000,
-    url: "./img/prod1.pngg"
+    url: "./img/prod1.jpg"
   },
   {
     id: 2,
     nome: "Stretch",
     preco: 50000,
-    url: "./img/prod1.pngg"
+    url: "./img/prod2.jpg"
   },
   {
     id: 3,
     nome: "Tinbot",
     preco: 15000,
-    url: "./img/prod1.pngp"
+    url: "./img/prod3.jpg"
   },
   {
     id: 4,
     nome: "Promobot",
     preco: 124610,
-    url: "./img/prod1.pngg"
+    url: "./img/prod4.jpg"
   },
   {
     id: 5,
     nome: "Medic",
     preco: 250000,
-    url: "./img/prod1.pngg"
+    url: "./img/prod5.jpg"
   },
   {
     id: 6,
     nome: "Ameca",
     preco: 500000,
-    url: "./img/prod1.pngg"
+    url: "./img/prod6.jpg"
   }
 ]
 
@@ -164,14 +119,16 @@ function comprar(i) {
   }
 }
 
+var price = 0;
+
 function montarCart() {
   var cartHTML = '';
   var price = 0;
   for (let j=0; j <6; j++) {
     if (localStorage.getItem(j+1) != null) {
       let objeto = JSON.parse(localStorage.getItem(j+1));
-      price += objeto.preco;
       cartHTML += '<div class="produtoCarrinho"><div class="fotoCarrinho"><img src="'+objeto.url+'" alt="indisponível" /></div><div class="txtCarrinho"><p>Nome:'+objeto.nome+'</p><p>Preço: R$'+objeto.preco+',00</p><div class="botoes"><button class="botaoMais" onclick="adicionar('+objeto.id+')">+</button><div class="qtd"><p>'+objeto.qtd+'</p></div><button id="botaoMenos" onclick="reduzir('+objeto.id+')">-</button></div></div></div>';
+      price += parseInt(objeto.qtd) * parseInt(objeto.preco) 
     }
   }
   if (cartHTML !== ''){
@@ -194,8 +151,8 @@ function adicionar(i) {
 
 function reduzir(i) {
   var prodJSON = JSON.parse(localStorage.getItem(i));
-  prodJSON.qtd -= 1;
-  if(parseInt(JSON.qtd) > 0) {
+  prodJSON.qtd--;
+  if(parseInt(prodJSON.qtd) > 0) {
     localStorage.setItem(i, JSON.stringify(prodJSON));
   } else {
     localStorage.removeItem(i)
